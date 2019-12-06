@@ -55,45 +55,43 @@ endif
 set background=light
 
 " Baseline
-hi Normal term=NONE cterm=NONE ctermfg=darkgray ctermbg=white
+hi Normal term=NONE cterm=NONE ctermfg=7 ctermbg=15
 
 " Faded
-hi ColorColumn  term=NONE cterm=NONE ctermfg=NONE ctermbg=gray
+hi ColorColumn  term=NONE cterm=NONE ctermfg=NONE ctermbg=8
 
-hi Keyword      term=NONE cterm=NONE ctermfg=gray ctermbg=NONE
+hi Keyword      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
 
-hi FoldColumn   term=NONE cterm=NONE ctermfg=gray ctermbg=NONE
-hi Folded       term=NONE cterm=NONE ctermfg=gray ctermbg=NONE
-hi LineNr       term=NONE cterm=NONE ctermfg=gray ctermbg=bg
-hi NonText      term=NONE cterm=NONE ctermfg=gray ctermbg=NONE
-hi SignColumn   term=NONE cterm=NONE ctermfg=gray ctermbg=bg
-hi SpecialKey   term=NONE cterm=NONE ctermfg=gray ctermbg=bg
-hi StatusLineNC term=NONE cterm=NONE ctermfg=fg   ctermbg=gray 
-hi VertSplit    term=NONE cterm=NONE ctermfg=fg   ctermbg=gray 
+hi FoldColumn   term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
+hi Folded       term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
+hi LineNr       term=NONE cterm=NONE ctermfg=8 ctermbg=bg
+hi NonText      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
+hi SignColumn   term=NONE cterm=NONE ctermfg=8 ctermbg=bg
+hi SpecialKey   term=NONE cterm=NONE ctermfg=8 ctermbg=bg
+hi StatusLineNC term=NONE cterm=NONE ctermfg=fg   ctermbg=8 
+hi VertSplit    term=NONE cterm=NONE ctermfg=fg   ctermbg=8 
 
 " Highlighted
-hi Comment      term=NONE cterm=NONE ctermfg=black ctermbg=NONE
-hi CursorColumn term=NONE cterm=NONE ctermfg=NONE  ctermbg=gray
-hi CursorIM     term=NONE cterm=NONE ctermfg=fg    ctermbg=4
-hi CursorLineNr term=NONE cterm=NONE ctermfg=NONE  ctermbg=white
-hi CursorLine   term=NONE cterm=NONE ctermfg=NONE  ctermbg=gray
-hi Cursor       term=NONE cterm=NONE ctermfg=fg    ctermbg=4
-hi Directory    term=NONE cterm=NONE ctermfg=blue  ctermbg=NONE
-hi ErrorMsg     term=NONE cterm=NONE ctermfg=red   ctermbg=white
-hi Error        term=NONE cterm=NONE ctermfg=red   ctermbg=white
-hi IncSearch    term=NONE cterm=NONE ctermfg=white ctermbg=2
-hi MatchParen   term=NONE cterm=NONE ctermfg=white ctermbg=blue
-hi ModeMsg      term=NONE cterm=NONE ctermfg=53    ctermbg=NONE
-hi MoreMsg      term=NONE cterm=NONE ctermfg=53    ctermbg=NONE
-hi PmenuSel     term=NONE cterm=NONE ctermfg=fg    ctermbg=13
-hi Question     term=NONE cterm=NONE ctermfg=53    ctermbg=NONE
-hi Search       term=NONE cterm=NONE ctermfg=white ctermbg=6
-hi StatusLine   term=NONE cterm=NONE ctermfg=white ctermbg=black
-hi Todo         term=NONE cterm=NONE ctermfg=green ctermbg=NONE
-hi WarningMsg   term=NONE cterm=NONE ctermfg=red   ctermbg=white
-hi WildMenu     term=NONE cterm=NONE ctermfg=black ctermbg=white
-
-
+hi Comment      term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
+hi CursorColumn term=NONE cterm=NONE ctermfg=NONE ctermbg=8
+hi CursorIM     term=NONE cterm=NONE ctermfg=fg   ctermbg=4
+hi CursorLineNr term=NONE cterm=NONE ctermfg=NONE ctermbg=15
+hi CursorLine   term=NONE cterm=NONE ctermfg=NONE ctermbg=8
+hi Cursor       term=NONE cterm=NONE ctermfg=fg   ctermbg=4
+hi Directory    term=NONE cterm=NONE ctermfg=4    ctermbg=NONE
+hi ErrorMsg     term=NONE cterm=NONE ctermfg=1    ctermbg=15
+hi Error        term=NONE cterm=NONE ctermfg=1    ctermbg=15
+hi IncSearch    term=NONE cterm=NONE ctermfg=15   ctermbg=2
+hi MatchParen   term=NONE cterm=NONE ctermfg=15   ctermbg=4
+hi ModeMsg      term=NONE cterm=NONE ctermfg=53   ctermbg=NONE
+hi MoreMsg      term=NONE cterm=NONE ctermfg=53   ctermbg=NONE
+hi PmenuSel     term=NONE cterm=NONE ctermfg=fg   ctermbg=13
+hi Question     term=NONE cterm=NONE ctermfg=53   ctermbg=NONE
+hi Search       term=NONE cterm=NONE ctermfg=15   ctermbg=6
+hi StatusLine   term=NONE cterm=NONE ctermfg=15   ctermbg=0
+hi Todo         term=NONE cterm=NONE ctermfg=2    ctermbg=NONE
+hi WarningMsg   term=NONE cterm=NONE ctermfg=1    ctermbg=15
+hi WildMenu     term=NONE cterm=NONE ctermfg=0    ctermbg=15
 
 " Reversed
 hi PmenuSbar  term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE
@@ -104,10 +102,10 @@ hi Visual     term=reverse cterm=reverse ctermfg=NONE ctermbg=NONE
 hi VisualNOS  term=reverse,underline cterm=reverse,underline ctermfg=NONE ctermbg=NONE
 
 " Diff
-hi DiffAdd    term=NONE cterm=NONE ctermfg=green ctermbg=NONE
-hi DiffChange term=NONE cterm=NONE ctermfg=94    ctermbg=NONE
-hi DiffDelete term=NONE cterm=NONE ctermfg=red   ctermbg=NONE
-hi DiffText   term=NONE cterm=NONE ctermfg=blue  ctermbg=NONE
+hi DiffAdd    term=NONE cterm=NONE ctermfg=2  ctermbg=NONE
+hi DiffChange term=NONE cterm=NONE ctermfg=94 ctermbg=NONE
+hi DiffDelete term=NONE cterm=NONE ctermfg=1  ctermbg=NONE
+hi DiffText   term=NONE cterm=NONE ctermfg=4  ctermbg=NONE
 
 " Spell
 hi SpellBad   term=underline cterm=underline ctermfg=5 ctermbg=NONE
@@ -118,7 +116,7 @@ hi SpellRare  term=underline cterm=underline ctermfg=5 ctermbg=NONE
 " Vim Features
 hi Menu        term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Scrollbar   term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
-hi TabLineFill term=NONE cterm=NONE ctermfg=fg   ctermbg=darkgray
+hi TabLineFill term=NONE cterm=NONE ctermfg=fg   ctermbg=7
 hi TabLine     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Tooltip     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
@@ -160,54 +158,54 @@ hi Type           term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Underlined     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " Sneak
-hi SneakLabelMask   term=NONE cterm=NONE ctermfg=black ctermbg=195
-hi SneakTarget      term=NONE cterm=NONE ctermfg=black ctermbg=195
-hi SneakLabelTarget term=NONE cterm=NONE ctermfg=black ctermbg=183
-hi SneakScope       term=NONE cterm=NONE ctermfg=black ctermbg=183
+hi SneakLabelMask   term=NONE cterm=NONE ctermfg=0 ctermbg=195
+hi SneakTarget      term=NONE cterm=NONE ctermfg=0 ctermbg=195
+hi SneakLabelTarget term=NONE cterm=NONE ctermfg=0 ctermbg=183
+hi SneakScope       term=NONE cterm=NONE ctermfg=0 ctermbg=183
 
 " Helper Functions
 function! NofrilsFocusComments()
-    hi Comment   term=NONE cterm=NONE ctermfg=black    ctermbg=NONE
-    hi Normal    term=NONE cterm=NONE ctermfg=darkgray ctermbg=white
-    hi LineNr    term=NONE cterm=NONE ctermfg=darkgray ctermbg=bg
-    hi Character term=NONE cterm=NONE ctermfg=NONE     ctermbg=NONE
-    hi String    term=NONE cterm=NONE ctermfg=NONE     ctermbg=NONE
+    hi Comment   term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
+    hi Normal    term=NONE cterm=NONE ctermfg=7    ctermbg=15
+    hi LineNr    term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+    hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
+    hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
     if g:nofrils_heavycomments
-        hi Comment term=NONE cterm=NONE ctermfg=darkmagenta ctermbg=NONE
+        hi Comment term=NONE cterm=NONE ctermfg=5 ctermbg=NONE
     end
 endfunction
 
 function! NofrilsFocusCode()
-    hi Comment   term=NONE cterm=NONE ctermfg=darkgray  ctermbg=NONE
-    hi Normal    term=NONE cterm=NONE ctermfg=black     ctermbg=white
-    hi LineNr    term=NONE cterm=NONE ctermfg=darkgray  ctermbg=bg
-    hi Character term=NONE cterm=NONE ctermfg=NONE      ctermbg=NONE
-    hi String    term=NONE cterm=NONE ctermfg=NONE      ctermbg=NONE
+    hi Comment   term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+    hi Normal    term=NONE cterm=NONE ctermfg=0    ctermbg=15
+    hi LineNr    term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+    hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
+    hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
     if g:nofrils_strbackgrounds
-        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=gray
-        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=gray
+        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=8
+        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=8
     end
 endfunction
 
 function! NofrilsNormal()
-    hi Comment   term=NONE cterm=NONE ctermfg=black     ctermbg=NONE
-    hi Normal    term=NONE cterm=NONE ctermfg=darkgray  ctermbg=white
-    hi LineNr    term=NONE cterm=NONE ctermfg=gray ctermbg=bg
-    hi Character term=NONE cterm=NONE ctermfg=NONE      ctermbg=NONE
-    hi String    term=NONE cterm=NONE ctermfg=NONE      ctermbg=NONE
+    hi Comment   term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
+    hi Normal    term=NONE cterm=NONE ctermfg=7    ctermbg=15
+    hi LineNr    term=NONE cterm=NONE ctermfg=8    ctermbg=bg
+    hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
+    hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
     " Optional Syntax Features
     if g:nofrils_strbackgrounds
-        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=gray
-        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=gray
+        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=8
+        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=8
     end
     if g:nofrils_heavycomments
-        hi Comment   term=NONE cterm=NONE ctermfg=darkmagenta ctermbg=NONE
+        hi Comment   term=NONE cterm=NONE ctermfg=5 ctermbg=NONE
     end
     if g:nofrils_heavylinenumbers
-        hi LineNr    term=NONE cterm=NONE ctermfg=darkmagenta ctermbg=NONE
+        hi LineNr    term=NONE cterm=NONE ctermfg=5 ctermbg=NONE
     end
 endfunction
 
