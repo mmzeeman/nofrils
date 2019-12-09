@@ -17,24 +17,6 @@
 " | Cyan    |      6 |     14
 " | White   |      7 |     15
 "
-" NR-16   NR-8    COLOR NAME
-" 0       0       Black
-" 1       4       DarkBlue
-" 2       2       DarkGreen
-" 3       6       DarkCyan
-" 4       1       DarkRed
-" 5       5       DarkMagenta
-" 6       3       Brown, DarkYellow
-" 7       7       LightGray, LightGrey, Gray, Grey
-" 8       0*      DarkGray, DarkGrey
-" 9       4*      Blue, LightBlue
-" 10      2*      Green, LightGreen
-" 11      6*      Cyan, LightCyan
-" 12      1*      Red, LightRed
-" 13      5*      Magenta, LightMagenta
-" 14      3*      Yellow, LightYellow
-" 15      7*      White
-
 hi clear
 if exists("syntax_on")
     syntax reset
@@ -55,21 +37,19 @@ endif
 set background=light
 
 " Baseline
-hi Normal term=NONE cterm=NONE ctermfg=7 ctermbg=15
+hi Normal term=NONE cterm=NONE ctermfg=8 ctermbg=15
 
 " Faded
-hi ColorColumn  term=NONE cterm=NONE ctermfg=NONE ctermbg=8
-
-hi Keyword      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
-
-hi FoldColumn   term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
-hi Folded       term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
-hi LineNr       term=NONE cterm=NONE ctermfg=8 ctermbg=bg
-hi NonText      term=NONE cterm=NONE ctermfg=8 ctermbg=NONE
-hi SignColumn   term=NONE cterm=NONE ctermfg=8 ctermbg=bg
-hi SpecialKey   term=NONE cterm=NONE ctermfg=8 ctermbg=bg
-hi StatusLineNC term=NONE cterm=NONE ctermfg=fg   ctermbg=8 
-hi VertSplit    term=NONE cterm=NONE ctermfg=fg   ctermbg=8 
+hi ColorColumn  term=NONE cterm=NONE ctermfg=NONE ctermbg=7
+hi Keyword      term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+hi FoldColumn   term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+hi Folded       term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+hi LineNr       term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+hi NonText      term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+hi SignColumn   term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+hi SpecialKey   term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+hi StatusLineNC term=NONE cterm=NONE ctermfg=fg   ctermbg=7 
+hi VertSplit    term=NONE cterm=NONE ctermfg=fg   ctermbg=7 
 
 " Highlighted
 hi Comment      term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
@@ -103,7 +83,7 @@ hi VisualNOS  term=reverse,underline cterm=reverse,underline ctermfg=NONE ctermb
 
 " Diff
 hi DiffAdd    term=NONE cterm=NONE ctermfg=2  ctermbg=NONE
-hi DiffChange term=NONE cterm=NONE ctermfg=94 ctermbg=NONE
+hi DiffChange term=NONE cterm=NONE ctermfg=5  ctermbg=NONE
 hi DiffDelete term=NONE cterm=NONE ctermfg=1  ctermbg=NONE
 hi DiffText   term=NONE cterm=NONE ctermfg=4  ctermbg=NONE
 
@@ -116,7 +96,7 @@ hi SpellRare  term=underline cterm=underline ctermfg=5 ctermbg=NONE
 " Vim Features
 hi Menu        term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Scrollbar   term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
-hi TabLineFill term=NONE cterm=NONE ctermfg=fg   ctermbg=7
+hi TabLineFill term=NONE cterm=NONE ctermfg=fg   ctermbg=8
 hi TabLine     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Tooltip     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
@@ -158,16 +138,23 @@ hi Type           term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Underlined     term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " Sneak
-hi SneakLabelMask   term=NONE cterm=NONE ctermfg=0 ctermbg=195
-hi SneakTarget      term=NONE cterm=NONE ctermfg=0 ctermbg=195
-hi SneakLabelTarget term=NONE cterm=NONE ctermfg=0 ctermbg=183
-hi SneakScope       term=NONE cterm=NONE ctermfg=0 ctermbg=183
+hi SneakLabelMask   term=NONE cterm=NONE ctermfg=0 ctermbg=5
+hi SneakTarget      term=NONE cterm=NONE ctermfg=0 ctermbg=5
+hi SneakLabelTarget term=NONE cterm=NONE ctermfg=0 ctermbg=15
+hi SneakScope       term=NONE cterm=NONE ctermfg=0 ctermbg=15
 
 " Helper Functions
 function! NofrilsFocusComments()
+    " Highlight
     hi Comment   term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
-    hi Normal    term=NONE cterm=NONE ctermfg=7    ctermbg=15
-    hi LineNr    term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+
+    " Normal
+    hi Normal    term=NONE cterm=NONE ctermfg=8    ctermbg=15
+    hi LineNr    term=NONE cterm=NONE ctermfg=8    ctermbg=bg
+
+    " Faded
+    "
+
     hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
     hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
@@ -177,22 +164,35 @@ function! NofrilsFocusComments()
 endfunction
 
 function! NofrilsFocusCode()
-    hi Comment   term=NONE cterm=NONE ctermfg=7    ctermbg=NONE
+    " Highlight
     hi Normal    term=NONE cterm=NONE ctermfg=0    ctermbg=15
+
+    " Normal 
+    hi Comment   term=NONE cterm=NONE ctermfg=8    ctermbg=NONE
+
+    " Faded
     hi LineNr    term=NONE cterm=NONE ctermfg=7    ctermbg=bg
+
     hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
     hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
     if g:nofrils_strbackgrounds
-        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=8
-        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=8
+        hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=7
+        hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=7
     end
 endfunction
 
 function! NofrilsNormal()
+    " Highlight
     hi Comment   term=NONE cterm=NONE ctermfg=0    ctermbg=NONE
-    hi Normal    term=NONE cterm=NONE ctermfg=7    ctermbg=15
+    
+    " Normal
+    hi Normal    term=NONE cterm=NONE ctermfg=8    ctermbg=15
     hi LineNr    term=NONE cterm=NONE ctermfg=8    ctermbg=bg
+
+    " Faded
+    "
+
     hi Character term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
     hi String    term=NONE cterm=NONE ctermfg=NONE ctermbg=NONE
 
